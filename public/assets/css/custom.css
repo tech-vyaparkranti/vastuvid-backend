@@ -1,0 +1,13 @@
+/** ADD YOUR AWESOME CODES HERE **/
+.f-weight-400 {
+    font-weight: 400;
+}
+.required{
+    color: red;
+}
+.h-80{
+    height: 80px;
+}
+.bacGroundImg{
+    background-image: url('http://www.vyapar-kranti.local/assets/img/ofc_mokup.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;
+}
