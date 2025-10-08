@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 
 
-include_once "adminRoutes.php";
+// include_once "adminRoutes.php";

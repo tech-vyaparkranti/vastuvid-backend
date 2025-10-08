@@ -61,11 +61,7 @@ Route::middleware(['auth'])->group(function () {
 
     //package Master
     
-    Route::resource('packageMaster', PackageMasterController::class);
-    Route::post("package-master-data-table",[PackageMasterController::class,"dataTable"])->name("packageMasterDataTable");
-    Route::post("add-city",[PackageMasterController::class,"addCity"])->name("add-city");
-    Route::post("enable-disable",[PackageMasterController::class,"enableDisablePackage"])->name("enableDisablePackage");
-
+   
     //contactUsData
     Route::get("contact-us-admin-page", [ContactUsController::class, "contactUsAdminPage"])->name("contactUsData");
     Route::post("contact-us-data-table", [ContactUsController::class, "contactUsDataTable"])->name("contactUsDataTable");
