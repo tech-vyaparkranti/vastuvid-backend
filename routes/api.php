@@ -44,6 +44,8 @@ use App\Http\Controllers\PaymentController;
 
 */
 
+Route::get('test-users', [AuthController::class, 'testUsers']);
+
 Route::post('create-payment-order', [PaymentController::class, 'createPaymentOrder']);
 Route::get('payment/webhook', [PaymentController::class, 'handleWebhook']);
 Route::get('get-home-plan', [PaymentController::class, 'getPlans']);
@@ -56,8 +58,7 @@ Route::post('/test-direct-registration', [PaymentController::class, 'testDirectR
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/signUp', [AuthController::class, 'signUp']);
+// Keep API under api middleware; session login/logout handled in web.php
 
 Route::get('home-elements',[WebSiteElementsController::class,'homeElements']);
 Route::get('social-link',[WebSiteElementsController::class,'socialMedia']);

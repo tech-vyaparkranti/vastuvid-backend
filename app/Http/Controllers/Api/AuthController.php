@@ -75,10 +75,7 @@ class AuthController extends Controller
     }
 
     // ✅ 4. Get Authenticated User
-    public function me(Request $request)
-    {
-        return response()->json($request->user());
-    }
+    
 
     // ✅ 5. Extended Registration and Reseller Signup
     public function storeFullRegistrationData(Request $request)
@@ -154,5 +151,10 @@ class AuthController extends Controller
             'user_registration' => $userRegistration,
             'reseller_customer_id' => $resellerCustomerId,
         ]);
+    }
+
+    public function testUsers(Request $request)
+    {
+        return response()->json(User::all(),200);
     }
 }
